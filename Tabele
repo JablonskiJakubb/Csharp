@@ -1,0 +1,208 @@
+/*PODKŁAD*/
+
+
+/*Random r = new Random();
+int[] T = new int[20];
+for (int i = 0; i < T.Length; i++)
+{
+    T[i] = r.Next(1,21);
+}
+for (int i = 0; i < T.Length; i++)
+{
+    Console.Write(T[i] + " ");
+}*/
+/* NAJWIEKSZA
+int maksik = int.MinValue;
+int n = int.Parse(Console.ReadLine());
+int[] W = new int[n];
+for (int i = 0; i < W.Length; i++)
+{
+    W[i] = int.Parse(Console.ReadLine());
+}
+for (int i = 0; i < W.Length; i++)
+{
+    if (W[i] > maksik)
+    {
+        maksik = W[i];
+    }
+}
+Console.WriteLine(maksik);*/
+
+
+/* Maksik random r*/
+/*Random r = new Random();
+int maksik = int.MinValue;
+int[] W = new int[20];
+for (int i = 0; i < W.Length; i++)
+{
+    W[i] = r.Next(1,21);
+}
+for (int i = 0; i < W.Length; i++)
+{
+    if (W[i] > maksik)
+    {
+        maksik = W[i];
+    }
+}
+for (int i = 0; i < W.Length; i++)
+{
+    Console.Write(W[i] + " ");
+}  
+Console.WriteLine("\n\n" +maksik);*/
+
+
+
+
+/*Random r = new Random();
+int[] T = new int[20];
+for (int i = 0; i < T.Length; i++)
+{
+    T[i] = r.Next(1,21);
+}
+for (int i = 0; i < T.Length; i++) ;
+Console.WriteLine(T.Max());
+*/
+
+
+
+
+/*Random r = new Random();
+int[] T = new int[20];
+for (int i = 0; i < T.Length; i++)
+{
+    T[i] = r.Next(1, 21);
+}
+for (int i = 0; i < T.Length; i++) ;
+Console.WriteLine(T.Min());
+*/
+
+/*Random r = new Random();
+int minik = int.MaxValue;
+int[] W = new int[20];
+for (int i = 0; i < W.Length; i++)
+{
+    W[i] = r.Next(1, 21);
+}
+for (int i = 0; i < W.Length; i++)
+{
+    if (W[i] < minik)
+    {
+        minik = W[i];
+    }
+}
+for (int i = 0; i < W.Length; i++)
+{
+    Console.Write(W[i] + " ");
+}
+Console.WriteLine("\n\n" + minik);*/
+
+
+/*Random r = new Random();
+int maksik = int.MinValue;
+int minik = int.MaxValue;
+int[] W = new int[20];
+for (int i = 0; i < W.Length; i++)
+{
+    W[i] = r.Next(1, 21);
+}
+for (int i = 0; i < W.Length; i++)
+{
+    if (W[i] < minik)
+    {
+        minik = W[i];
+    }
+    if (W[i] > maksik) 
+    {
+        maksik = W[i];
+    }
+}
+for (int i = 0; i < W.Length; i++)
+{
+    Console.Write(W[i] + " ");
+}
+Console.WriteLine("\n" + minik);
+Console.WriteLine("\n" + maksik);
+Console.WriteLine();
+Console.WriteLine(maksik - minik);*/
+
+/*Random r = new Random();
+int suma = 0;
+int[] T = new int[20];
+for (int i = 0; i < T.Length; i++)
+{
+    T[i] = r.Next(1,200);
+}
+for (int i = 0; i < T.Length; i++)
+{
+    suma += T[i];
+}
+Console.WriteLine(suma);*/
+
+/*Random r = new Random();
+int maksik = int.MinValue;
+int ilosc = 1;
+int[] W = new int[20];
+for (int i = 0; i < W.Length; i++)
+{
+    W[i] = r.Next(1, 21);
+}
+for (int i = 0; i < W.Length; i++)
+{
+    if (W[i] > maksik)
+    {
+        maksik = W[i];
+    }
+}
+for (int i = 0; i < W.Length; i++)
+{
+    Console.Write(W[i] + " ");
+}
+Console.WriteLine("\n\n" + maksik);*/
+
+
+/*int maksik = T[0];
+int liczba = 1;
+foreach(int x in T)
+{
+    if (x > maksik) 
+    {
+        maksik = x;
+        liczba = 1;
+    }
+    else if (x==maksik)
+    {
+        liczba += 1;
+    }
+}
+Console.WriteLine();
+Console.WriteLine(maksik + " - " + liczba);
+*/
+
+using System.Runtime.ExceptionServices;
+
+Random r = new Random();
+int[] T = new int[20];
+for (int i = 0; i < T.Length; i++)
+{
+    T[i] = r.Next(1, 21);
+}
+for (int i = 0; i < T.Length; i++)
+{
+
+    Console.Write(T[i] + " ");
+}
+
+int parzyste = 0;
+for (int i = 0; i < T.Length; i++) 
+{
+    if (T[i] % 2 == 0) 
+    {
+        parzyste += 1;
+    }
+}
+int nieparzyste = 20 - parzyste;
+Console.WriteLine("\n\nParzystych: " + parzyste + "\nnieparzystych: " + nieparzyste);
+Console.WriteLine();
+if (nieparzyste > parzyste) Console.WriteLine("więcej jest nieparzystych");
+if (nieparzyste == parzyste) Console.WriteLine("tyle samo");
+if (nieparzyste < parzyste) Console.WriteLine("Wieceh jest parzystych");
