@@ -1,5 +1,15 @@
 /*PODKŁAD*/
+Random r = new Random();
+int[] T = new int[20];
+for (int i = 0; i < T.Length; i++)
+{
+    T[i] = r.Next(1, 21);
+}
+for (int i = 0; i < T.Length; i++)
+{
 
+    Console.Write(T[i] + " ");
+}
 
 /*Random r = new Random();
 int[] T = new int[20];
