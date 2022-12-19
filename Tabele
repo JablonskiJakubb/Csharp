@@ -216,3 +216,25 @@ Console.WriteLine();
 if (nieparzyste > parzyste) Console.WriteLine("więcej jest nieparzystych");
 if (nieparzyste == parzyste) Console.WriteLine("tyle samo");
 if (nieparzyste < parzyste) Console.WriteLine("Wieceh jest parzystych");
+
+WAŻNE
+/*using System.Runtime.ExceptionServices;
+
+Random r = new Random();
+int[] T = new int[30];
+for (int i = 0; i < T.Length; i++)
+{
+    T[i] = r.Next(1, 10);
+    Console.WriteLine((T[i] + " "));
+}
+
+Console.WriteLine("\n\n");  
+
+for (int i = 1; i < T.Length - 1; i++)
+{
+    if (T[i] == T[i - 1])
+    {
+        Console.WriteLine($"równe liczby to {T[i]} na pozycjach {i - 1}, {i}");
+    }
+}
+*/
