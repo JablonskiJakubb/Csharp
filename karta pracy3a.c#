@@ -70,3 +70,10 @@ for (int i = 0; i < n; i++)
     }
     Console.WriteLine();
 }*/
+
+w0 = int(input())
+L = float(input())
+W = W0
+for i in range (0, int(L*12)):
+    W = W + (W * 6/100)/12
+Consol.WriteLine(W)
