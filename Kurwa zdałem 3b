@@ -1,0 +1,13 @@
+// zad 7
+Console.WriteLine("podaj do jakiej dwucyfrowej liczby nieparzystej");
+int n = int.Parse(Console.ReadLine());
+if (n > 45) 
+{
+    Console.WriteLine("to już nie liczby dwucyfrowe");
+}
+int suma = 0;
+for (int i = 11; i < 11 + (n * 2); i = i + 2) 
+{
+    suma = suma + i;
+}
+Console.WriteLine(suma);
