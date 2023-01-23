@@ -238,3 +238,81 @@ for (int i = 1; i < T.Length - 1; i++)
     }
 }
 */
+
+/*int n = 20;
+Random random = new Random();
+int[] T = new int[n];
+for (int i = 0; i<T.Count(); i++)
+{
+    T[i] = random.Next(1, 21);
+}
+
+for (int i = 0; i < T.Length; i++)
+{
+    Console.Write(T[i] + ", ");
+}
+
+Console.WriteLine("\n");
+
+// 1. znajdź największą
+Console.WriteLine(T.Max());
+
+Console.WriteLine("\n");
+
+
+int maksik = T[0];
+for (int i = 1; i < T.Count(); i++)
+{
+    if (T[i] > maksik)
+    {
+        maksik = T[i];
+    }
+}
+Console.WriteLine(maksik);*/
+
+/*int n = 20;
+Random random = new Random();
+int[] T = new int[n];
+for (int i = 0; i < T.Count(); i++)
+{
+    T[i] = random.Next(1, 21);
+}
+
+for (int i = 0; i < T.Length; i++)
+{
+    Console.Write(T[i] + ", ");
+}
+
+Console.WriteLine("\n");*/
+
+/*Console.WriteLine(T.Min());
+
+Console.WriteLine("\n");
+*/
+
+using System.ComponentModel;
+using System.Transactions;
+// wszystkie wartości dodane i średnia
+int n = 20;
+Random random = new Random();
+int[] T = new int[n];
+for (int i = 1; i < T.Count(); i++)
+{
+    T[i] = random.Next(1, 21);
+}
+
+for (int i = 0; i < T.Length; i++)
+{
+    Console.Write(T[i] + ", ");
+}
+
+Console.WriteLine("\n");
+
+int suma = 0;
+for (int i = 0; i < T.Length; i++)
+{
+    suma += T[i];
+}
+Console.WriteLine(suma);
+Console.WriteLine(Math.Round(T.Average(), 1));
+
