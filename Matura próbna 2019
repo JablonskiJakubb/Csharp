@@ -12,6 +12,26 @@ bool CzyPierwsza(int n)
     return true;
 }
 
+int SumaCyfr(int n)
+{
+    int suma = 0;
+    while (n>0)
+    {
+        suma += n % 10;
+        n /= 10;
+    }
+    return suma;
+}
+
+int WagaLiczby(int n)
+{
+    while (n>=10) 
+    {
+        n = SumaCyfr(n);
+    }
+    return n; 
+}
+
 string[] plik = System.IO.File.ReadAllLines(@"C:\Users\uczen\Desktop\liczby_przyklad.txt");
 
 StreamWriter wynik = new(@"C:\Users\uczen\Desktop\wyniki4_1.txt");
@@ -48,6 +68,18 @@ foreach(string pierwsza in pierwsze)
 
 
 }
+
+wynik.WriteLine();
+wynik.WriteLine("Zadanie4.3\n");
+
+foreach(string pierwsza in pierwsze)
+{
+    if (WagaLiczby(int.Parse(pierwsza)) == 1)
+    {
+        wynik.WriteLine(pierwsza);
+    }
+}
+Console.WriteLine(WagaLiczby(343));
 wynik.Close();
 
 
