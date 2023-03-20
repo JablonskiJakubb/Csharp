@@ -1,0 +1,54 @@
+using System.Collections;
+
+bool CzyPierwsza(int n)
+{
+    for (int i = 2;i < n;i++)
+    {
+        if (n%i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+string[] plik = System.IO.File.ReadAllLines(@"C:\Users\uczen\Desktop\liczby_przyklad.txt");
+
+StreamWriter wynik = new(@"C:\Users\uczen\Desktop\wyniki4_1.txt");
+ArrayList L = new ArrayList();
+foreach (string item in plik)
+{
+    L.Add(int.Parse(item));
+}
+wynik.WriteLine("Zadanie 4.1\n\n");
+
+foreach (int item in L)
+{
+    if (item >= 100 && item <= 5000 && CzyPierwsza(item))
+    {
+        wynik.WriteLine(item);
+    }
+}
+wynik.WriteLine("\n");
+
+
+string[] pierwsze = System.IO.File.ReadAllLines(@"C:\Users\uczen\Desktop\pierwsze_przyklad.txt");
+wynik.WriteLine("Zadanie 4.2\n\n");
+
+foreach(string pierwsza in pierwsze)
+{
+    char[] odwrot = pierwsza.ToArray();
+    Array.Reverse(odwrot);
+    Console.WriteLine();
+
+    if (CzyPierwsza(int.Parse(pierwsza)) && CzyPierwsza(int.Parse(string.Join("",odwrot))))
+    {
+        wynik.WriteLine(pierwsza);
+    }
+
+
+}
+wynik.Close();
+
+
+
