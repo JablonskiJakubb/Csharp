@@ -1,0 +1,93 @@
+/*public class Program
+{
+    public static void Main()
+    {
+        int[] arr = { 79, 86, 97, 43, 64, 25, 12, 22, 11, 7, 23, 5 };
+
+        BubbleSort(arr);
+        System.Console.WriteLine("Posortowana tablica"); ;
+        PrintArray(arr);
+    }
+
+    static void BubbleSort(int[] arr)
+    {
+        int n = arr.Length;
+
+        for (int i = 0; i < n - 1; i++)
+            for (int j = 0; j < n - i - 1; j++)
+                if (arr[j] > arr[j + 1])
+                {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+    }
+
+    static void PrintArray(int[] arr)
+    {
+        int n = arr.Length;
+
+        for (int i = 0; i < n; ++i)
+            System.Console.Write(arr[i] + " ");
+
+        System.Console.WriteLine();
+    }
+}*/
+
+
+/*bąbelkowe*/
+
+
+
+
+using System;
+using System.ComponentModel;
+
+internal partial class Program
+{
+    private static void Main(string[] args)
+    {
+        Random ra = new Random();
+        int n = 8;
+        int temp;
+        int[] T = new int[n];
+        for (int i = 0; i < n; i++)
+        {
+            T[i] = ra.Next(1, 10);
+            Console.Write(T[i] + " ");
+        }
+    }
+
+
+       /* for (int i = n - 1; i > 0; i--)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                if (T[j] > T[j + 1])
+                {
+                    temp = T[j];
+                    T[j] = T[j + 1];
+                    T[j + 1] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < n; i++)
+            Console.Write(T[i] + " ");
+    }
+}*/
+
+/*wstawianie*/
+
+for (int i = 1; i>n; i++)
+{
+    temp = T[i];
+    for(int j = i; j < 0;j--)
+    {
+        if (T[j] > temp)
+        {
+            T[j + 1] = T[j];
+            j--;
+        }
+    }
+            T[j] = temp;
+}
