@@ -1,0 +1,80 @@
+/*using System.Collections;
+
+int n = int.Parse(Console.ReadLine());
+
+ArrayList A = new ArrayList();
+for (int i = 1; i < n + 1; i++)
+{
+    if (n % i == 0)
+    {
+        A.Add(i);
+    }
+}
+
+foreach (var item in A)
+    Console.Write(item + " ");*/
+
+/*bool czyPierwsza(int n)
+{
+    for (int i = 2; i < n; i++)
+    {
+        if (n % i == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+Random r = new Random();
+int liczba = 0;
+
+int[] T = new int[20];
+int ilosc = 0;
+while (ilosc < 20)
+{
+    liczba = r.Next(100, 1000);
+    if (liczba % 2 == 0 && !czyPierwsza(liczba))
+    {
+        T[ilosc] = liczba;
+        ilosc++;
+    }
+}
+*/
+
+
+/*Random r = new Random();
+int[] T = new int[40];
+int[] L = new int[100];
+for (int i = 0; i < 40; i++)
+{
+    T[i] = r.Next(10,100);
+    L[T[i]]++;
+}
+int suma = 0;
+for ( int j = 0; j < 100; j++)
+{ 
+    if (L[j] == 2)
+    {
+        suma += 2 * j;
+    }
+}
+Console.WriteLine(suma);*/
+/*
+using System.Globalization;
+
+int n = int.Parse(Console.ReadLine());
+Random r = new Random();
+int[,] M = new int [n,n];
+int suma = 0;
+for (int i = 0; i < n;i++)
+{
+    for (int j = 0; j < n;i++)
+    {
+        if (i - j == 0 || i + j == n - 1)
+        {
+            suma += M[i, j];
+        }
+    }
+}
+Console.WriteLine(suma);*/
