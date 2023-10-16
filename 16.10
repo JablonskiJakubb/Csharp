@@ -1,0 +1,25 @@
+LogoAlkomator 
+
+1.	Planowanie systemu
+System logoAlkomator ma za zadanie umożliwić zalogowanemu i trzeźwemu użytkownikowi używanie skomplikowanego systemu obliczeniowego. System będzie dodawał, odejmował, mnożył i dzielił.
+
+2.	Analiza Systemu
+Składniki systemu:
+- moduł logowania 
+- moduł trzeźwości
+- moduł obliczeniowy
+	Baza danych: plik tekstowy
+Program używa konsoli do interakcji z użytkownikiem
+
+3.	Projektowanie systemu
+System będzie składał się z procedur:
+-logowanie(), trzeźwość(), obliczanie(a,b), parsowanie pliku danych()
+Plik danych będzie w formacie tekstowym: login,haslo_jawne.
+Obliczenia będą wprowadzane jako napis, który będzie parsowany celem wyjęcia z niego: liczb i działania.
+4.	Implementacja
+Implementacja ma mieć 3 etapy: logowanie, trzeźwość i obliczanie
+
+5.	Testowanie
+
+6.	Wdrożenie
+Stworzyć instalkę programu, która stworzy plik wykonywalny oraz bazę danych z testowym usrem i hasłem
