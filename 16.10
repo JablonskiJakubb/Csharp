@@ -20,6 +20,38 @@ Obliczenia będą wprowadzane jako napis, który będzie parsowany celem wyjęci
 Implementacja ma mieć 3 etapy: logowanie, trzeźwość i obliczanie
 
 5.	Testowanie
+string[] parsujBaze()
+{
+    string[] strings = new string[2];
+    StreamReader sr = new StreamReader("..\\..\\..\\baza.txt");
+    strings = sr.ReadLine().Split(",");
+    return strings;
+}
+Console.WriteLine("Podaj login i hasło: ");
+string login = Console.ReadLine();
+string haslo = Console.ReadLine();
+
+string[] credentials = parsujBaze();
+
+if (login == credentials[0] && haslo == credentials[1])
+{
+    Console.WriteLine("Gotowy na test trzeźwości? [T/N] : ");
+}
+else
+{
+    Console.WriteLine("baj baj wytrzeźwiaj");
+    Environment.Exit(0);
+}
+
+if (Console.ReadKey().ToString() == "N")
+{
+    Console.WriteLine("baj baj wypierdalaj");
+    Environment.Exit(0);
+}
+if (Console.ReadKey().ToString() == "T")
+{
+
+}
 
 6.	Wdrożenie
 Stworzyć instalkę programu, która stworzy plik wykonywalny oraz bazę danych z testowym usrem i hasłem
