@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+
+        class Klient { }
+        class Produkt { }
+        class Dostawa { }
+
+
+        class zamowienie
+        {
+            Klient k;
+            List<Produkt> p;
+            Dostawa d;
+
+            public void setKlient(Klient k)
+            {
+                this.k = k;
+            }
+
+            public void setProdukt(Produkt p)
+            {
+                this.p.Add(p);
+            }
+            public void jednakDodajDostawe(Dostawa d)
+            {
+                this.d = d;
+            }
+        }
+        static void Main(string[] args)
+        { 
+            
+        }
+    }
+}
