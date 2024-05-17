@@ -1,0 +1,403 @@
+
+
+/*int reku(int n)
+{
+    if (n == 1)
+    {
+        return -1;
+    }
+    else
+    {
+        return -reku(n - 1) * n - 3;
+    }
+}
+*/
+// 5 - 12
+// 4 - -3 
+// 3 -  0
+// 2 - -1
+// 1 - -1
+
+/*Console.WriteLine(reku(5));*/
+
+/*int iter(int n)
+{
+    if (n == 1)
+    {
+        return -1;
+    }
+    int x = -1;
+    for (int i = 2; i <= n; i++)
+    {
+        x = -x * i - 3;
+    }
+    return x;
+}
+
+Console.WriteLine(iter(5));*/
+
+/*using System.ComponentModel.DataAnnotations;
+
+double reku(int n)
+{
+    if (n == 1)
+    {
+        return 1;
+    }
+    if (n == 2)
+    {
+        return 0.5;
+    }
+    return -reku(n-1) * reku(n-2);
+}*/
+
+
+//reku(5) = 0.125
+//reku(4) = 0.25
+//reku(3) = -0.5
+/*Console.WriteLine(reku(5));*/
+
+/*double iter(int n)
+{
+    if (n == 1) {
+        return 1;
+    }
+    if (n == 2)
+    {
+        return 0.5;
+    }
+    double x = 0.5;
+    double xpop = 1;
+    double xpop1 = 0;
+    for (int i = 3; i <= n; i++)
+    {
+        xpop1 = x;
+        x = -x * xpop;
+        xpop = xpop1;
+    }
+    return x;
+}
+
+Console.WriteLine(iter(5));*/
+
+
+//Dana jest liczba naturalna n > 0 i tablica różnych liczb całkowitych a[n]. Rozważmy następującą funkcję rekurencyjną F z argumentami i będacymi liczbą naturalną 1<= i <=n
+
+
+
+
+
+/*int reku2(int i)
+{
+    int[] a = new int[10] { 5, 1, 8, 9, 7, 2, 3, 11, 20, 15 };
+    int n = a.Length;
+    int j = 0;
+    if (i == n - 1)
+    {
+        return n - 1;
+    }
+    else
+    {
+        j = reku2(i + 1);
+    }
+    if (a[i-1] < a[j-1])
+    {
+        return i;
+    }
+    else
+    {
+        return j;
+    }
+}
+*/
+
+
+
+//i9 zwraca 9
+//i8 zwraca 8 j=9
+//i7 zwraca 7 j=8
+//i6 zwraca 6 j=7
+//i5 zwraca 5 
+
+
+
+//i = 9
+//i = 7
+//i = 5
+
+
+//F[5] = 6
+//F[6] = 6
+//F[7] = 7
+//F[8] = 8
+//F[9] = 9
+// F[10] = 10
+
+
+//int[] a = new int[10] { 5, 1, 8, 9, 7, 2, 3, 11, 20, 15 };
+
+
+//niech W będzie wynikiem wywołania funkcji F dla argumentu i, 1<= i <= n. wtedy a[w] w odniesieniu do pozostałych liczb w tablicy a jest zawsze..
+// *najmniejszą liczbą w tej tablicy
+// *najmniejszą liczbą w tej tablicy spośród elementów o indeksach od i do n,
+// *najmniejszą liczbą w tej tablicy spośród elementów o indeksach od 1 do i
+
+//ile porównań między elementami tablicy zostanie wykonanych przy wywołaniu F(512) dla n = 2012?
+
+//napisz fukncje iteracyjnie
+/*{
+    int[] a = new int[10] { 5, 1, 8, 9, 7, 2, 3, 11, 20, 15 };
+    int n = T.Length;
+    int j = 0;
+    if (i == n - 1)
+    {
+        return n - 1;
+    }
+    else
+    {
+        j = reku2(i + 1);
+    }
+    if (T[i] < T[j])
+    {
+        return i;
+    }
+    else
+    {
+        return j;
+    }
+}
+*/
+
+/*int iter2(int x){ 
+    int[] a = new int[10] { 5, 1, 8, 9, 7, 2, 3, 11, 20, 15 };
+    int min = a.Length - 1;
+    for (int i = a.Length - 2; i >= x; i--)
+    {
+        if (a[i] < a[min])
+        {
+            min = i;
+        }
+    }
+    return min;
+}
+Console.WriteLine(iter2(4));*/
+
+
+
+//min = n
+//for i = n-1 do 1
+//  if a[i] < a[min]
+//      min = i
+// cw(min)
+
+/*int reku(int n)
+{
+    if (n == 0)
+    {
+        return 1;
+    }
+    return 7 * reku(n - 1);
+}
+
+Console.WriteLine(reku(5));*/
+//reku(5) = 16807
+//reku(4) = 2401
+//reku(3) = 343
+//reku(2) = 49 
+//reku(1) = 7
+//reku(0) = 1
+
+/*int reku(int n)
+{
+    if (n == 0)
+    {
+        return 1;
+    }
+    return */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Zadanie 1. Napisz funkcję, która wyznaczy silnię przekazanej liczby całkowitej.
+//Zadanie 2. Napisz funkcję, która wyznaczy n-ty wyraz ciągu fibonacciego.
+
+
+/*int reku(int n)
+{
+    if (n <= 1)
+    {
+        return 1;
+    }
+    return reku(n - 1) * n;
+}
+
+Console.WriteLine(reku(5));
+
+int reku2(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    if (n == 1)
+    {
+        return 1;
+    }
+    return reku2(n - 1) + reku2(n - 2);
+}
+
+
+
+
+Console.WriteLine(reku2(12));
+*/
+
+//Zadanie 3. Napisz funkcję, która wyznaczy sumę cyfr przekazanej liczby całkowitej.
+//Zadanie 4. Napisz funkcję, która wyznaczy NWD (Największy wspólny dzielnik).
+//Zadanie 5. Napisz funkcję, która wyznaczy potęgę przekazanej liczby oraz wykładnika.
+
+/*int reku(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    return reku(n / 10) + n % 10;
+}
+
+Console.WriteLine(reku(123));*/
+
+/*int reku(int a, int b)
+{
+    if (b != 0)
+    {
+        return reku(b, a % b);
+    }
+    return a;
+    
+}
+Console.WriteLine(reku(7, 8));*/
+
+/*int reku (int a, int b)
+{
+    if (a != b)
+    {
+        return reku(a > b? a - b : a, b > a? b - a : b);
+    }
+    return a;
+}
+
+Console.WriteLine(reku(12,8));*/
+
+
+/*int reku(int a, int b)
+{
+    if (b == 0)
+    {
+        return 1;
+    }
+    return reku(a, b - 1) * a;
+}
+Console.WriteLine(reku(2,0));*/
+
+/*
+int reku(int n)
+{
+    if (n == 1)
+    {
+        return 1;
+    }
+    return reku(n - 1) + n ;
+}
+
+
+for (int i = 1; i < 10; i++)
+{
+    Console.Write(reku(i) + " ");
+    Console.Write(i);
+    Console.WriteLine();
+}*/
+
+
+int reku(int n)
+{
+    if (n == 0)
+        return 0;
+    return reku(n - 1) + 5;
+}
+Console.WriteLine(reku(5));
+Console.WriteLine("\t");
+int rekufib(int n)
+{
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+    return rekufib(n - 1) + rekufib(n - 2);
+}
+for (int i = 5; i > 0; i--)
+{
+    Console.WriteLine(rekufib(i));
+}
+Console.WriteLine("\t");
+int reku2(int n)
+{
+    if (n == 1) return 1;
+    return reku2(n - 1) + n;
+}
+
+for (int i =7; i > 0; i--)
+{
+    Console.WriteLine(reku2(i));
+}
+Console.WriteLine("\t");
+
+
+// Zadanie 8: Ciąg: 1, 2, 6, 24, 120, ...
+// Zadanie 9: Ciąg: 1, 2, 3, 6, 36, 648, 139968 ....
+// Zadanie 10: Ciąg: 1, 2, 5, 0, 3, -2, 1, -4 ...
+// Zadanie 11: Ciąg 256, 16, 4, 2, 1.41, 1.19, 1.09... itd
+// Zadanie 12: Ciąg: 1, 4, 5, 1, 6, 5, 11, 6, 17, 11... itd
+
+/*int reku8 (int n)
+{
+    if (n == 1) return 1;
+    return reku8(n - 1) * n;
+}
+for (int i = 5; i > 0; i--)
+{
+    Console.WriteLine(reku8(i));
+}
+Console.WriteLine("\t");
+
+int reku9 (int n)
+{
+    if (n == 1) return 1;
+    if (n == 2) return 2;
+    if (n == 3) return 3;
+    return reku9(n - 1) * reku9(n-2) * reku9(n-3);
+}
+
+
+for (int i =7; i > 0; i--)
+{
+    Console.WriteLine(reku9(i));
+}
+Console.WriteLine("\t");*/
+
+
+//sklej(3) == 3
+//sklej(4) == 5
+//sklej(5) == 4 + sklej(2) + sklej(3) == 4 + 1 + 3 == 8
+//sklej(6) == 5 + 6 == 11
+
+
